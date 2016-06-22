@@ -13,6 +13,13 @@ Wenn ein Kunde mehrere Wordpressinstanzen hat, ist es möglich, die .htpasswd in
 
 In der .htpasswd finden sich ein Benutzername und ein Passwort. Der Inhalt der Datei lässt sich am einfachsten mit einem [Generator](http://www.htaccesstools.com/htpasswd-generator/) erstellen.
 
+### Symlink erstellen
+Wenn das Repository ausgecheckt wird, wird automatisch ein Unterordner wp-htaccess erstellt. Deshalb muss im Wordpressverzeichnis ein sogenannter Symlink auf die .htaccess Datei aus dem Repository erstellt werden. Hierfür muss folgender Befehl im Wordpressverzeichnis ausgeführt werden:
+
+```bash
+ln -s wp-htaccess/.htaccess .htaccess
+```
+
 ### Pfad zur .htpasswd anpassen
 Der Pfad zur .htpasswd Datei muss in der .htaccess Datei ergänzt werden:
 ``` bash
